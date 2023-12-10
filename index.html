@@ -1,62 +1,251 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-  <title>倒计时</title>  
-  <style>  
-    body {  
-      font-family: Arial, sans-serif;  
-      text-align: center;  
-      margin: 0;  
-      padding: 0;  
-      background-color: pink;  
-    }  
-      
-    .container {  
-      display: flex;  
-      flex-direction: column;  
-      align-items: center;  
-      justify-content: center;  
-      height: 100vh;  
-    }  
-      
-    h1 {  
-      font-size: 2em;  
-      margin-bottom: 1em;  
-    }  
-      
-    p {  
-      font-size: 1.5em;  
-    }  
-  </style>  
-</head>  
-<body>  
-  <div class="container">  
-    <h1>距离年龄交接平台开放还有</h1>  
-    <p id="countdown"></p>  
-  </div>  
-  <script>  
-    // 设置目标日期和时间（年、月、日、小时、分钟、秒）  
-    var targetDate = new Date(2023, 11, 7, 0, 0, 0); // 这里设置的是2023年7月30日（注意月份是从0开始计数的）  
-    var countdownElement = document.getElementById('countdown');  
-    var countdownInterval = setInterval(updateCountdown, 1000);  
-      
-    function updateCountdown() {  
-      var now = new Date();  
-      var differenceInSeconds = Math.floor((targetDate - now) / 1000);  
-        
-      if (differenceInSeconds <= 0) {  
-        clearInterval(countdownInterval);  
-        window.location.href = 'index2.html'; // 指定要跳转的HTML文件（将'target.html'替换为实际的文件名）  
-        return;  
-      }  
-        
-      var days = Math.floor(differenceInSeconds / 60 / 60 / 24);  
-      var hours = Math.floor((differenceInSeconds / 60 / 60) % 24);  
-      var minutes = Math.floor((differenceInSeconds / 60) % 60);  
-      var seconds = Math.floor(differenceInSeconds % 60);  
-        
-      countdownElement.innerHTML = days + ' 天 ' + hours + ' 小时 ' + minutes + ' 分钟 ' + seconds + ' 秒';  
-    }  
-  </script>  
-</body>  
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>科技强国、教育强国、人才强国</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<!-- 页面一 -->
+		<div class="poster">
+			<!-- 头部导航栏 -->
+			<div class="header_bar">
+				<!-- 头部左边，logo -->
+				<div class="header_left">
+					<!-- 音乐logo -->
+					<div class="musicLogo">
+						<a href="###">
+							<img src="img/MusicLogo.png">
+						</a>
+					</div>
+					<!-- 原神logo -->
+					<div class="GenshinLogo">
+						<img src="img/Genshin.png"/>
+					</div>
+				</div>
+
+				<!-- 横向导航栏 -->
+				<div class="header_navbar">
+					<ul>
+						<li>
+							<a href="###">首&nbsp;页</a>
+						</li>
+						<li>
+							<a href="###">新&nbsp;闻</a>						
+						</li>
+						<li>
+							<a href="###">科技&nbsp;强国</a>
+						</li>
+						<li>
+							<a href="###">教育&nbsp;强国</a>
+						</li>
+						<li>
+							<a href="###">人才&nbsp;强国</a>
+						</li>
+						<li>
+							<a href="###">往期&nbsp;学习</a>
+						</li>
+					</ul>
+				</div>
+				
+				<!-- 头部右边 -->
+				<div class="header_right">
+					<!-- 成长关爱系统 -->
+					<a href="###" class="header_cs">
+						<span>学习强国系统</span>
+						<img src="img/aixin.png"/>
+					</a>
+					
+					<!-- 登录 -->
+					<a href="###" class="header_login">
+						<span>登&nbsp;录</span>
+						<img src="img/loginLogo.png"/>
+					</a>
+				</div>
+			</div>
+			
+			<!-- 页面一的背景 -->
+			<div id="background1" style="height: 1920px; height: 1080px;">
+				<video id="bg" poster="img/bg1.jpg" loop="loop" muted="muted" autoplay width="1920px" height="1080px">
+					<source src="video/bg1.mp4" type="video/mp4"/>
+				</video>
+			</div>
+			
+			<!-- 底部标志 -->
+			<div class="poster_sign">
+				<!-- 播放标志 -->
+				<div class="poster_video">
+					<button class="poster_video_button">
+					</button>
+				</div>
+				
+				<!-- 12+ 标志 -->
+				<div class="poster_badge">
+					<img src="img/posterBadge.png"/>
+				</div>
+				
+				<!-- 下载标志 -->
+				<div class="download_logo">
+					<!-- 二维码 -->
+
+					
+
+					
+					<!-- taptap, android -->
+
+					
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		<!-- 页面二 -->
+		<div class="news">
+			<h3>新闻资讯</h3>
+			
+			<!-- 新闻主题 -->
+			<div class="news_main">
+				<!-- 轮播图 -->
+				<div class="carousel_map">
+					<div class="slide">
+						<input type="radio" name="pic" id="pic1" checked/>
+						<input type="radio" name="pic" id="pic2"/>
+						<input type="radio" name="pic" id="pic3"/>
+						<input type="radio" name="pic" id="pic4"/>
+						
+						<div class="labels">
+							<label for="pic1"></label>
+							<label for="pic2"></label>
+							<label for="pic3"></label>
+							<label for="pic4"></label>
+						</div>
+						
+						<ul class="list">
+							<li class="item">
+								<a href="###">
+									<img src="img/news1.jpg" style="height: 100%; width: 100%;"/>
+								</a>
+							</li>
+							<li class="item">
+								<a href="###">
+									<img src="img/news2.jpg" style="height: 100%; width: 100%;"/>
+								</a>
+							</li>
+							<li class="item">
+								<a href="###">
+									<img src="img/news3.jpg" style="height: 100%; width: 100%;"/>
+								</a>
+							</li>
+							<li class="item">
+								<a href="###">
+									<img src="img/news4.jpg" style="height: 100%; width: 100%;"/>
+								</a>
+							</li>
+							<li class="item">
+								<a href="###">
+									<img src="img/news1.jpg" style="height: 100%; width: 100%;"/>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- 新闻内容 -->
+				<div class="news_content">
+					<ul class="news_table_list">
+						<li id="t1">最新</li>
+						<li id="t2">新闻</li>
+						<li id="t3">公告</li>
+						<li id="t4">活动</li>
+					</ul>
+					
+					<ul class="news_list" id="news_1">
+						<li>
+							<a href="https://www.gov.cn/xinwen/2022-04/30/content_5688265.htm" target="_blank" class="news_item" title="习近平：加快建设科技强国 实现高水平科技自立自强。">
+								<p class="news_title">习近平：加快建设科技强国 实现高水平科技自立自强。</p>
+								<p class="news_date">2022/4/30</p>
+								<!-- https://www.gov.cn/xinwen/2022-04/30/content_5688265.htm -->
+							</a>
+						</li>
+						<li>
+							<a href="https://www.gov.cn/yaowen/liebiao/202309/content_6904156.htm" target="_blank"class="news_item" title="习近平：扎实推动教育强国建设！」">
+								<p class="news_title">习近平：扎实推动教育强国建设</p>
+								<p class="news_date">2023/9/15</p>
+								<!--https://www.gov.cn/yaowen/liebiao/202309/content_6904156.htm-->
+							</a>
+						</li>
+						<li>
+							<a href="https://www.gov.cn/xinwen/2021-12/15/content_5660938.htm" target="_blank" class="news_item" title="《习近平：深入实施新时代人才强国战略">
+								<p class="news_title">习近平：深入实施新时代人才强国战略 </p>
+								<p class="news_date">2021/12/15</p>
+								<!--https://www.gov.cn/xinwen/2021-12/15/content_5660938.htm-->
+							</a>
+						</li>
+						<li>
+							<a href="https://www.chinacourt.org/article/detail/2023/05/id/7291617.shtml" target="_blank" class="news_item" title="习近平：在二十届中央政治局第四次集体学习时的讲话">
+								<p class="news_title">习近平：在二十届中央政治局第四次集体学习时的讲话</p>
+								<p class="news_date">2023/5/15</p>
+								<!--https://www.chinacourt.org/article/detail/2023/05/id/7291617.shtml-->
+							</a>
+						</li>
+						<li>
+							<a href="https://www.xuexi.cn/" target="_blank" class="news_item" title="学习强国">
+								<p class="news_title">学习强国</p>
+								<p class="news_date">2019/1/1</p>
+								<!--https://www.xuexi.cn/-->
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- 页面三 -->
+		<div class="city">
+			<ul class="city_list">
+				<!-- city1 -->
+				<li class="city_list_item">
+					<div class="city_bg1"></div>
+					<a href="http://cpc.people.com.cn/n1/2023/0508/c451232-32681274.html" target="_blank">
+						<p>政治学习</p>
+					</a>
+				</li>
+				
+				<!-- city2 -->
+				<li class="city_list_item">
+					<div class="city_bg2"></div>
+					<a href="http://cpc.people.com.cn/n1/2021/0719/c64387-32161458.html	" target="_blank">
+						<p>思想学习</p>
+					</a>
+				</li>
+				
+				<!-- city3 -->
+				<li class="city_list_item">
+					<div class="city_bg3"></div>
+					<a href="http://dangshi.people.com.cn/n1/2021/1109/c436975-32277370.html" target="_blank">
+						<p>党史学习</p>
+					</a>
+				</li>
+				
+				<!-- city4 -->
+				<li class="city_list_item">
+					<div class="city_bg4"></div>
+					<a href="https://tougao.12371.cn/gaojian.php?tid=3897815" target="_blank">
+						<p>红歌党史</p>
+					</a>
+				</li>
+				
+				<!-- city-end -->
+				<li class="city_list_item">
+					<div class="city_end"></div>
+					<a href="###">
+						<p>敬请期待</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>	
 </html>
